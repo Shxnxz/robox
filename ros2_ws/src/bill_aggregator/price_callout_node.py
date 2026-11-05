@@ -35,7 +35,7 @@ class PriceCalloutNode(Node):
         # Create the spoken sentence
         # Change the language/style as needed
         text = f"Total is {total} baht."
-        # Alternative examples:
+
         # text = f"The total price is {total}."
         # text = f"Your bill is {total} baht."
         # text = str(total)   # just the number
