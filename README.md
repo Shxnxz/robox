@@ -18,17 +18,17 @@ Navigate to table → Stop → Pan camera → Detect plates → Classify color �
 | **Detection** | A YOLO nano model finds plates in each camera frame. |
 | **Color classification** | One detection class per plate color, plus an HSV/CNN check to tell similar colors apart. |
 | **Counting** | Results from several frames are combined so no plate is counted twice. |
-| **Billing** | Color → price comes from a config file, then the robot computes the subtotal, service charge and total. |
+| **Billing** | Color → price comes from a config file, then the robot computes the subtotal, service charge and total. The net will be audio voice call out |
 | **Display** | The front LCD shows the count per color and the total in THB. If confidence is low, it shows "please check" instead. |
 
 ## Plate prices (default config)
 
 | Color | Price (THB) |
 |---|---|
-| 🔴 Red | 40 |
-| ⚪ White / Silver | 60 |
-| 🟡 Yellow / Gold | 80 |
-| ⚫ Black | 120 |
+| 🩵 Blue | 30 |
+| 💚 Green | 40 |
+| 🩷 Pink | 60 |
+| 💛 Yellow | 80 |
 
 Prices are stored in `config/plate_prices.yaml`, not in the model. To change them, edit the file; no retraining is needed.
 
