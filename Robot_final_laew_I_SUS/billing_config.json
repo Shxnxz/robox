@@ -1,0 +1,20 @@
+{
+  "currency": "THB",
+  "currency_spoken": "baht",
+  "plate_prices": {"Pink": "60.00", "Blue": "30.00", "Green": "40.00", "Yellow": "80.00"},
+  "service_charge_percent": "10",
+  "vat_percent": "7",
+  "vat_on_service_charge": true,
+  "vat_mode": "exclusive",
+  "discount_amount": "0.00",
+  "camera_source": 0,
+  "model_path": "best.onnx",
+  "image_size": 640,
+  "presence_confidence": 0.25,
+  "billing_confidence": 0.65,
+  "stable_frames": 4,
+  "speech_enabled": true,
+  "speak_on_capture": true,
+  "speech_rate": 155,
+  "receipts_directory": "receipts"
+}

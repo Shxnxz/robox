@@ -1,14 +1,34 @@
--LiDAR
+-Motor Driver (T1)
 ssh pi@172.20.10.3
 
 docker exec -it confident_keller bash
 
-root@raspberrypi:/#	ros2 run ydlidar_ros2_driver ydlidar_ros2_driver_node   --ros-args   --params-file /root/yahboomcar_ros2_ws/software/library_ws/src/ydlidar_ros2_driver-humble/params/TminiPro.yaml
+source /opt/ros/humble/setup.bash
+source /root/yahboomcar_ros2_ws/software/library_ws/install/setup.bash
 
+export ROS_DOMAIN_ID=61
+export ROS_LOCALHOST_ONLY=0
+export FASTRTPS_DEFAULT_PROFILES_FILE=/tmp/fastdds_udp.xml
 
+ros2 run yahboomcar_bringup Mcnamu_driver_M1
 
+-LiDAR Driver (T2)
+ssh pi@172.20.10.3
 
--Open robot_menu.py
+docker exec -it confident_keller bash
+
+source /opt/ros/humble/setup.bash
+source /root/yahboomcar_ros2_ws/software/library_ws/install/setup.bash
+
+export ROS_DOMAIN_ID=61
+export ROS_LOCALHOST_ONLY=0
+export FASTRTPS_DEFAULT_PROFILES_FILE=/tmp/fastdds_udp.xml
+
+ros2 run ydlidar_ros2_driver ydlidar_ros2_driver_node \
+  --ros-args \
+  --params-file /root/yahboomcar_ros2_ws/software/library_ws/src/ydlidar_ros2_driver-humble/params/TminiPro.yaml
+
+-Open robot_menu.py (T3)
 
 ssh pi@172.20.10.3
 
