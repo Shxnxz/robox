@@ -1,0 +1,27 @@
+-LiDAR
+ssh pi@172.20.10.3
+
+docker exec -it confident_keller bash
+
+root@raspberrypi:/#	ros2 run ydlidar_ros2_driver ydlidar_ros2_driver_node   --ros-args   --params-file /root/yahboomcar_ros2_ws/software/library_ws/src/ydlidar_ros2_driver-humble/params/TminiPro.yaml
+
+
+
+
+-Open robot_menu.py
+
+ssh pi@172.20.10.3
+
+cd /home/pi/plate_billing_trial
+
+source .venv/bin/activate
+
+python3 robot_menu.py
+
+
+
+plate_checkout.py = Detect plates & create bill show on Terminal [2]
+robot_menu.py = menu control robot [1] Say Welcome(maybe drift in here), [3] call queue by queue_number.txt
+rosmaster_m1_drift_8.py = drift number 8 (Start left from center 8)
+robot_voice_command.py = Say: Hey robot -> 1: Call the next customer, 2: Reset the queue(Yes,No)
+scan_plate_360.py = Scan plate 360 & go ahead to the plate [4]
