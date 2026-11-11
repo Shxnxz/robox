@@ -1,0 +1,8 @@
+path: /content/dataset_yolo_robust
+train: images/train
+val: images/val
+names:
+  0: Pink
+  1: Blue
+  2: Green
+  3: Yellow
